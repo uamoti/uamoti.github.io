@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang='en-GB'>
+
+  <head>
+    <meta charset='utf-8'/>
+    <meta name='viewport' content='width=device-width'/>
+    <link href='../static/styles.css' rel='stylesheet'>
+    <title>Bernardo M S Oliveira</title>
+  </head>
+
+  <a href='index.html'><h1>Bernardo Moreira Soares Oliveira</h1></a>
+  <div class='topnav'>
+    <a href='dev.html'>Dev stuff</a>
+    <a href='academia.html'>Academia</a>
+    <a href='about.html'>About me</a>
+  </div>
+
+  <body>
+    <p>My background is in exercise physiology and skeletal muscle biology.</p>
+    <p>I got my bachelors from UFMG and spent the last 2 years as an intern at the laboratory of exercise physiology,  where we studied thermoregulation and fatigue</p>
+    <p>From 2010 to 2013 I was in Jyväskylä (Finland) researching muscle hypertrophy and Duchenne muscular dystrophy for my masters. The journey continued into Sweden for my PhD, still on the theme of muscular dystrophy.</p>
+    <p>My first post-doc was in Odense (Denmark), working with obesity and genetics. I'm almost done with my second one in Kuopio (Finland).</p>
+    <p>Despite moving into software development, I'm grateful for my academic career as it took me to many nice places where I learned (and grew) a lot, meeting wonderful people along the way. I was also able to make use of my coding ability sometimes, mostly in the form of data analysis and bioinformatics.</p>
+    <p>If interested, you can check my publications <a href='https://orcid.org/0000-0002-1606-432X'>here</a></p>
+  </body>
+  
+  <footer>
+  </footer>
+  
+</html>

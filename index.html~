@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang='en-GB'>
+
+  <head>
+    <meta charset='utf-8'/>
+    <meta name='viewport' content='width=device-width'/>
+    <link href='../static/styles.css' rel='stylesheet'>
+    <title>Bernardo M S Oliveira</title>
+  </head>
+
+  <a href=''><h1>Bernardo Moreira Soares Oliveira</h1></a>
+  <div class='topnav'>
+    <a href='dev.html'>Dev stuff</a>
+    <a href='academia.html'>Academia</a>
+    <a href='about.html'>About me</a>
+  </div>
+
+  <body>
+    <p>Hi there,</p>
+    <p>Thanks for visiting my humble corner of the web.</p>
+    <br>
+    <p>I'm Bernardo, a full stack student at kood/Sisu.</p>
+    <p>
+      I'm interested in back end development and automation.
+      Here you can follow a bit of my journey from biomedical researcher to coding wizard.
+    </p>
+  </body>
+  
+  <footer>
+  </footer>
+  
+</html>
