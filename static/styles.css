@@ -1,3 +1,8 @@
+body {
+    width: 80%;
+    margin: auto;
+}
+
 /* Add a black background color to the top navigation */
 .topnav {
     background-color: #333;
@@ -28,4 +33,27 @@
 
 h1 {
     text-decoration: none;
+}
+
+.project-panel {
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+
+.project {
+    margin-top: 50px;
+}
+
+.project-pics {
+    display: grid;
+    grid-template-columns: 470px 470px;
+    grid-template-rows: 320px 320px;
+}
+
+.project-pics img {
+    width: 450px;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 5px;
 }
