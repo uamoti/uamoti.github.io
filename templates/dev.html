@@ -3,86 +3,140 @@
 
   <head>
     <meta charset='utf-8'/>
-    <meta name='viewport' content='width=device-width'/>
-    <link href='../static/styles.css' rel='stylesheet'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'/>
+    <!-- <link href='static/styles.css' rel='stylesheet'> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>Bernardo M S Oliveira</title>
   </head>
 
-  <a href='../index.html'><h1>Bernardo Moreira Soares Oliveira</h1></a>
-  <div class='topnav'>
-    <a href='dev.html'>Coding</a>
-    <a href='academia.html'>Academia</a>
-    <a href='about.html'>About me</a>
-  </div>
+  <body class='text-center'>
+    <div class='m-3'>
+      <a href='../index.html'><h1>Bernardo Moreira Soares Oliveira</h1></a>
+    </div>
+  
+    <nav class='navbar bg-dark border-bottom justify-content-evenly' data-bs-theme='dark'>
+      <a href='dev.html'>Coding</a>
+      <a href='academia.html'>Academia</a>
+      <a href='about.html'>About me</a>
+    </nav>
 
-  <body>
-    <p>kood/Sisu asks us not to make our code public to avoid plagiarism by other students. It can be privately shared during recruitment processes.</p>
-    <p>Here's an overview of our most relevant projects:</p>
+    <div class='container my-3'>
+      <p>
+	kood/Sisu asks us not to make our code public to avoid plagiarism by other students.
+	It can be privately shared during recruitment processes.
+      </p>
+      <p>Here's an overview of our most relevant projects:</p>
+    </div>
+
     <div class='project-panel'>
-      <div class='project'>
-	<h3>Match me</h3>
+
+      <div class='project container my-5'>
+	<h2>Match me</h2>
 	<p>Current project</p>
-	<p>Stack:</p>
-	<ul>
-	  <li>Go</li>
-	  <li>Postgres</li>
-	  <li>REST API</li>
-	  <li>React</li>
-	  <li>JWT</li>
-	  <li>Web sockets</li>
-	</ul>
-      </div>
-
-      <div class='project'>
-	<h3>Race track</h3>
-	<div class='project-pics'>
-	  <img src='../static/img/racetrack/screenshot0.png'/>
-	  <img src='../static/img/racetrack/screenshot1.png'/>
-	  <img src='../static/img/racetrack/screenshot2.png'/>
-	  <img src='../static/img/racetrack/screenshot3.png'/>
+	<div class='stack container my-3'>
+	  <h4>Stack:</h4>
+	  <ul class='list-group'>
+	    <li class='list-group-item'>Go</li>
+	    <li class='list-group-item'>Postgres</li>
+	    <li class='list-group-item'>REST API</li>
+	    <li class='list-group-item'>React</li>
+	    <li class='list-group-item'>JWT</li>
+	    <li class='list-group-item'>Web sockets</li>
+	  </ul>
 	</div>
-	<p>Stack:</p>
-	<ul>
-	  <li>Node</li>
-	  <li>SQLite</li>
-	  <li>Web sockets</li>
-	</ul>
       </div>
 
-      <div class='project'>
-	<h3>Literary forum</h3>
-	<div class='project-pics'>
-	  <img src='../static/img/lions_forum/screenshot0.png'/>
-	  <img src='../static/img/lions_forum/screenshot1.png'/>
-	  <img src='../static/img/lions_forum/screenshot2.png'/>
-	  <img src='../static/img/lions_forum/screenshot3.png'/>
-	</div>
-	<p>Stack:</p>
-	<ul>
-	  <li>Go</li>
-	  <li>SQLite</li>
-	  <li>(Go) HTML templating</li>
-	  <li>Docker</li>
-	</ul>
-      </div>
-
-      <div class='project'>
-	<h3>Cars</h3>
-	<div class='project-pics'>
-	  <img src='../static/img/cars/screenshot0.png'/>
-	  <img src='../static/img/cars/screenshot1.png'/>
-	  <img src='../static/img/cars/screenshot2.png'/>
+      <div class='project container my-5'>
+	<h2>Race track</h2>
+	<div class='project-pics container mx-auto'>
+	  <div class='row'>
+	    <div class='col'>
+	      <img src='../static/img/racetrack/screenshot0.png' class='img-thumbnail'/>
+	    </div>
+	    <div class='col'>
+	      <img src='../static/img/racetrack/screenshot1.png' class='img-thumbnail'/>
+	    </div>
 	  </div>
-	<p>Stack:</p>
-	<ul>
-	  <li>Go</li>
-	  <li>Goroutines</li>
-	  <li>REST API</li>
-	</ul>
+	  <div class='row'>
+	    <div class='col'>
+	      <img src='../static/img/racetrack/screenshot2.png' class='img-thumbnail'/>
+	    </div>
+	    <div class='col'>
+	      <img src='../static/img/racetrack/screenshot3.png' class='img-thumbnail'/>
+	    </div>
+	  </div>
+	</div>
+	<div class='stack container my-3'>
+	  <h4>Stack:</h4>
+	  <ul class='list-group'>
+	    <li class='list-group-item'>Node</li>
+	    <li class='list-group-item'>SQLite</li>
+	    <li class='list-group-item'>React</li>
+	    <li class='list-group-item'>Web sockets</li>
+	  </ul>
+	</div>
       </div>
 
-      <div class='project'>
-	<h3>Art interface</h3>
+      <div class='project container my-5'>
+	<h2>Literary forum</h2>
+	<div class='project-pics container mx-auto'>
+	  <div class='row'>
+	    <div class='col-6'>
+	      <img src='../static/img/lions_forum/screenshot0.png' class='img-thumbnail'/>
+	    </div>
+	    <div class='col-6'>
+	      <img src='../static/img/lions_forum/screenshot1.png' class='img-thumbnail'/>
+	    </div>
+	  </div>
+	  <div class='row'>
+	    <div class='col-6'>
+	      <img src='../static/img/lions_forum/screenshot2.png' class='img-thumbnail'/>
+	    </div>
+	    <div class='col-6'>
+	      <img src='../static/img/lions_forum/screenshot3.png' class='img-thumbnail'/>
+	    </div>
+	  </div>
+	</div>
+	<div class='stack container my-3'>
+	  <h4>Stack:</h4>
+	  <ul class='list-group'>
+	    <li class='list-group-item'>Go</li>
+	    <li class='list-group-item'>SQLite</li>
+	    <li class='list-group-item'>(Go) HTML templating</li>
+	    <li class='list-group-item'>Docker</li>
+	  </ul>
+	</div>
+      </div>
+
+      <div class='project container my-5'>
+	<h2>Cars</h2>
+	<div class='project-pics container mx-auto'>
+	  <div class='row'>
+	    <div class='col-6'>
+	      <img src='../static/img/cars/screenshot0.png' class='img-thumbnail'/>
+	    </div>
+	    <div class='col-6'>
+	      <img src='../static/img/cars/screenshot1.png' class='img-thumbnail' style='height: 75%'/>
+	    </div>	
+	  </div>
+	  <div class='row justify-content-center'>
+	    <div class='col-6'>
+	      <img src='../static/img/cars/screenshot2.png' class='img-thumbnail'/>
+	    </div>
+	  </div>
+	</div>
+	<div class='stack container my-3'>
+	  <h4>Stack:</h4>
+	  <ul class='list-group'>
+	    <li class='list-group-item'>Go</li>
+	    <li class='list-group-item'>Goroutines</li>
+	    <li class='list-group-item'>REST API</li>
+	  </ul>
+	</div>
+      </div>
+
+      <div class='project container my-5'>
+	<h2>Art interface</h2>
 	<p>This one you can check <a href='https://art-gcp-rq7pwf56pq-lz.a.run.app/'>here</a> ;)</p>
       </div>
     </div>
