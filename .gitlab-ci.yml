@@ -14,5 +14,5 @@ create-pages:
   script:
     - npm run build
     - rm -rf public
-    - cp build/index.html build/404.html
-    - mv build public
+    - cp dist/index.html dist/404.html
+    - mv dist public
