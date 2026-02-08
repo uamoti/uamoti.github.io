@@ -18,10 +18,21 @@ nav {
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
+  /* `height: 6em;` togs bort för att låta bilden bestämma sin egen höjd */
+  padding: 1.5em 0; /* Behåll horisontell padding, ta bort vertikal här */
   will-change: filter;
   transition: filter 300ms;
+  /* `padding-bottom: 200px;` togs bort då det var för mycket utrymme */
+  margin-bottom: 2rem; /* Lägg till lite utrymme mellan bilden och texten */
+}
+
+.logo img {
+    border-radius: 50%;
+    width: 200px; /* Fast bredd för cirkulär bild */
+    height: 200px; /* Fast höjd för cirkulär bild */
+    object-fit: cover; /* Säkerställer att bilden täcker ytan utan att förvrängas */
+    display: block; /* Gör bilden till ett blockelement */
+    margin: 0 auto; /* Centrera bilden horisontellt */
 }
 
 .logo:hover {
@@ -53,4 +64,19 @@ nav {
 
 .read-the-docs {
   color: #888;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrerar innehållet horisontellt i en kolumnlayout */
+  /* justify-content: center; // Använd endast om containern har en definierad höjd och du vill centrera vertikalt */
+  width: 100%; /* Säkerställer att containern tar full bredd */
+  max-width: 800px; /* Valfritt: begränsa innehållsbredden för bättre läsbarhet */
+  margin: 0 auto; /* Centrera hela home-content-containern på sidan */
+  text-align: center; /* Centrera texten inom p-taggarna */
+}
+
+.home-content p {
+  max-width: 600px; /* Begränsa bredden på styckena för bättre läsbarhet */
 }
