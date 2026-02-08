@@ -80,3 +80,25 @@ nav {
 .home-content p {
   max-width: 600px; /* Begränsa bredden på styckena för bättre läsbarhet */
 }
+
+.main-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #242424; /* Samma bakgrundsfärg som navbaren */
+  padding: 1rem 0;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Skugga uppåt */
+  z-index: 1000;
+  text-align: center;
+}
+
+.main-footer .social-links a {
+  color: #fff; /* Länkfärg */
+  margin: 0 0.5rem;
+  text-decoration: none;
+}
+
+.main-footer .social-links a:hover {
+  text-decoration: underline;
+}
