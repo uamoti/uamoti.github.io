@@ -28,8 +28,8 @@ nav {
 
 .logo img {
     border-radius: 50%;
-    width: 200px; /* Fast bredd för cirkulär bild */
-    height: 200px; /* Fast höjd för cirkulär bild */
+    width: 300px; /* Fast bredd för cirkulär bild */
+    height: 300px; /* Fast höjd för cirkulär bild */
     object-fit: cover; /* Säkerställer att bilden täcker ytan utan att förvrängas */
     display: block; /* Gör bilden till ett blockelement */
     margin: 0 auto; /* Centrera bilden horisontellt */
@@ -101,4 +101,81 @@ nav {
 
 .main-footer .social-links a:hover {
   text-decoration: underline;
+}
+
+.stack {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* För att visa tekniker i rad */
+    flex-wrap: wrap; /* Om många tekniker, bryt rad */
+    justify-content: center; /* Centrera teknikerna */
+    gap: 10px; /* Utrymme mellan tekniker */
+}
+
+.stack li {
+    background-color: #333;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    white-space: nowrap; /* Förhindra radbrytning inom en teknik */
+}
+
+/* Nya stilar för projektkarusellen */
+.project-carousel-container {
+    display: flex;
+    align-items: center; /* Centrera knappar och projekt vertikalt */
+    justify-content: center; /* Centrera allt horisontellt */
+    width: 100%;
+    margin-top: 2rem; /* Lite utrymme från toppen */
+    min-height: 400px; /* Säkra en minimihöjd för karusellen */
+}
+
+.project-carousel-display {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; /* Centrera kortet inuti displayen */
+    max-width: 800px; /* Maxbredd för kortet */
+}
+
+.project-card {
+    background-color: #1a1a1a;
+    border: 1px solid #646cffaa;
+    border-radius: 8px;
+    padding: 2em;
+    margin: 0 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%; /* Säkerställ att kortet tar tillgänglig bredd */
+    max-width: 600px; /* Maxbredd för kortet */
+}
+
+.project-summary {
+    max-width: 80%; /* Begränsa bredden för sammanfattningstexten */
+    margin: 1em auto 2em auto; /* Centrera texten och ge marginaler */
+    line-height: 1.5;
+}
+
+.carousel-button {
+    background-color: #646cffaa;
+    color: white;
+    border: none;
+    padding: 1em 1.5em;
+    cursor: pointer;
+    font-size: 1.5em;
+    border-radius: 5px;
+    margin: 0 1em;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+    background-color: #535bf2;
+}
+
+/* Justering för befintliga project-relaterade stilar */
+.project h3 {
+    margin-bottom: 1em;
+}
+.project h4 {
+    margin-top: 2em;
+    margin-bottom: 1em;
 }

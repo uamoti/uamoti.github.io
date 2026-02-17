@@ -18,7 +18,7 @@ function Academia() {
 	    <br/>
 	    <p>
 		After some months back home, I managed to secure a scholarship from the
-		<i>Science Without Borders</i> programme from the Brazilian Ministry
+		<i> Science Without Borders</i> programme from the Brazilian Ministry
 		of Education. And so we went to Lund (Sweden) to continue working on muscle
 		dystrophies, this time congenital instead of Duchenne, and microRNAs.
 	    </p>
