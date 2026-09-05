@@ -1,181 +1,278 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-  padding-top: 80px; /* Lägg till padding för att undvika att innehåll döljs under fast nav */
+/* Dark Nordic Theme Variables */
+:root {
+  --bg-color: #0f141c;
+  --card-bg: #18202c;
+  --nav-bg: #131a24;
+  --text-main: #e2e8f0;
+  --text-muted: #94a3b8;
+  --accent-teal: #00d1b2;
+  --accent-blue: #7aa2f7;
+  --accent-hover: #535bf2;
+  --border-color: #2a364f;
 }
 
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+#root {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  text-align: center;
+}
+
+/* Navigation */
 nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #242424; /* Bakgrundsfärg för navigeringsmenyn */
-  padding: 1rem 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 1000; /* Säkerställ att navigeringsmenyn är över annat innehåll */
+  background-color: var(--nav-bg);
+  padding: 1.2rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  border-bottom: 1px solid var(--border-color);
 }
 
-.logo {
-  /* `height: 6em;` togs bort för att låta bilden bestämma sin egen höjd */
-  padding: 1.5em 0; /* Behåll horisontell padding, ta bort vertikal här */
-  will-change: filter;
-  transition: filter 300ms;
-  /* `padding-bottom: 200px;` togs bort då det var för mycket utrymme */
-  margin-bottom: 2rem; /* Lägg till lite utrymme mellan bilden och texten */
+nav a {
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 0.8rem;
+  transition: color 0.2s ease;
 }
 
-.logo img {
-    border-radius: 50%;
-    width: 300px; /* Fast bredd för cirkulär bild */
-    height: 300px; /* Fast höjd för cirkulär bild */
-    object-fit: cover; /* Säkerställer att bilden täcker ytan utan att förvrängas */
-    display: block; /* Gör bilden till ett blockelement */
-    margin: 0 auto; /* Centrera bilden horisontellt */
+nav a:hover {
+  color: var(--accent-teal);
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
+/* Home Page */
 .home-content {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centrerar innehållet horisontellt i en kolumnlayout */
-  /* justify-content: center; // Använd endast om containern har en definierad höjd och du vill centrera vertikalt */
-  width: 100%; /* Säkerställer att containern tar full bredd */
-  max-width: 800px; /* Valfritt: begränsa innehållsbredden för bättre läsbarhet */
-  margin: 0 auto; /* Centrera hela home-content-containern på sidan */
-  text-align: center; /* Centrera texten inom p-taggarna */
+  align-items: center;
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.home-content p {
-  max-width: 600px; /* Begränsa bredden på styckena för bättre läsbarhet */
+.intro-text h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.2rem;
+  color: var(--text-main);
 }
 
+.intro-text .subtitle {
+  font-size: 1.1rem;
+  color: var(--accent-teal);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.intro-text p {
+  line-height: 1.6;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+.logo img {
+  border-radius: 50%;
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 1.5rem auto;
+  border: 3px solid var(--accent-teal);
+  box-shadow: 0 0 20px rgba(0, 209, 178, 0.2);
+}
+
+/* Projects / Dev Section */
+.dev-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.dev-subtitle {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2em;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover {
+  border-color: var(--accent-teal);
+  transform: translateY(-2px);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.project-card h3 a {
+  color: var(--accent-blue);
+  text-decoration: none;
+}
+
+.project-card h3 a:hover {
+  text-decoration: underline;
+}
+
+.project-summary {
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 1rem 0 1.5rem 0;
+}
+
+.project-card h4 {
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--accent-teal);
+}
+
+/* Stack Icons */
+.stack-icons-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tech-icon-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  font-size: 0.85rem;
+  color: var(--text-main);
+}
+
+.tech-icon-wrapper svg {
+  color: var(--accent-blue);
+}
+
+/* Academia Section with Background Map */
+.academia-container {
+  width: 100%;
+  min-height: 650px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+/* About Me Section with Background Image */
+.about-container {
+  width: 100%;
+  min-width: 800px;
+  /* max-width: 1200px; */
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+.academia-card {
+  background: rgba(15, 20, 28, 0.55);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 1.8rem;
+  width: 100%;
+  max-width: 680px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.academia-card h2 {
+  margin-top: 0;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  font-size: 1.8rem;
+}
+
+.academia-card p {
+  color: #f1f5f9;
+  line-height: 1.6;
+  font-size: 0.98rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.academia-card strong {
+  color: #00f2d2;
+  text-shadow: 0 0 8px rgba(0, 242, 210, 0.4);
+}
+
+/* Footer */
 .main-footer {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #242424; /* Samma bakgrundsfärg som navbaren */
-  padding: 1rem 0;
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Skugga uppåt */
+  background-color: var(--nav-bg);
+  padding: 0.8rem 0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.4);
   z-index: 1000;
-  text-align: center;
+  border-top: 1px solid var(--border-color);
 }
 
 .main-footer .social-links a {
-  color: #646cffaa; /* Länkfärg */
+  color: var(--accent-blue);
   margin: 0 0.5rem;
   text-decoration: none;
+  font-size: 0.95rem;
 }
 
 .main-footer .social-links a:hover {
-  text-decoration: underline;
-}
-
-.stack {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex; /* För att visa tekniker i rad */
-    flex-wrap: wrap; /* Om många tekniker, bryt rad */
-    justify-content: center; /* Centrera teknikerna */
-    gap: 10px; /* Utrymme mellan tekniker */
-}
-
-.stack li {
-    background-color: #333;
-    padding: 0.5em 1em;
-    border-radius: 5px;
-    white-space: nowrap; /* Förhindra radbrytning inom en teknik */
-}
-
-/* Nya stilar för projektkarusellen */
-.project-carousel-container {
-    display: flex;
-    align-items: center; /* Centrera knappar och projekt vertikalt */
-    justify-content: center; /* Centrera allt horisontellt */
-    width: 100%;
-    margin-top: 2rem; /* Lite utrymme från toppen */
-    min-height: 400px; /* Säkra en minimihöjd för karusellen */
-}
-
-.project-carousel-display {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center; /* Centrera kortet inuti displayen */
-    max-width: 800px; /* Maxbredd för kortet */
-}
-
-.project-card {
-    background-color: #1a1a1a;
-    border: 1px solid #646cffaa;
-    border-radius: 8px;
-    padding: 2em;
-    margin: 0 1em;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    width: 100%; /* Säkerställ att kortet tar tillgänglig bredd */
-    max-width: 600px; /* Maxbredd för kortet */
-}
-
-.project-summary {
-    max-width: 80%; /* Begränsa bredden för sammanfattningstexten */
-    margin: 1em auto 2em auto; /* Centrera texten och ge marginaler */
-    line-height: 1.5;
-}
-
-.carousel-button {
-    background-color: #646cffaa;
-    color: white;
-    border: none;
-    padding: 1em 1.5em;
-    cursor: pointer;
-    font-size: 1.5em;
-    border-radius: 5px;
-    margin: 0 1em;
-    transition: background-color 0.3s ease;
-}
-
-.carousel-button:hover {
-    background-color: #535bf2;
-}
-
-/* Justering för befintliga project-relaterade stilar */
-.project h3 {
-    margin-bottom: 1em;
-}
-.project h4 {
-    margin-top: 2em;
-    margin-bottom: 1em;
+  color: var(--accent-teal);
 }

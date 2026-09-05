@@ -2,21 +2,24 @@ import brutalLegendImage from './assets/brutal-legend-2.png';
 
 function Home() {
     return (
-	<div className="home-content">
-	    <div className="logo">
-		<img src={brutalLegendImage} alt="Avatar of a headbanger"/>
-	    </div>
-	    <div>
-		<p>Hi there,</p>
-		<p>Thanks for visiting my humble corner of the web.</p>
-		<p>I'm Bernardo, a full stack student at kood/Sisu.</p>
-		    <p>
-			I'm interested in back end development and automation.
-			Here you can follow a bit of my journey from biomedical researcher to coding wizard.
-		    </p>
-	    </div>
-	</div>
-    )
+        <div className="home-content">
+            <div className="logo">
+                <img src={brutalLegendImage} alt="Avatar of Bernardo" />
+            </div>
+            <div className="intro-text">
+                <h1>Hi, I'm Bernardo</h1>
+                <p className="subtitle">Biomedical Researcher &rarr; Software Engineer</p>
+                <p>
+                    Transitioning from a career in biomedical science and academic research into software engineering. 
+                    From my academic background, I bring solid hands-on experience with data analysis and visualisation.
+                </p>
+                <p>
+                    Currently, I'm a full stack student at <strong>kood/Sisu</strong>. I focus my studies primarily on back end 
+                    development with <strong>Go</strong>, alongside full stack web technologies including <strong>JavaScript</strong> and <strong>React</strong>.
+                </p>
+            </div>
+        </div>
+    );
 }
-	    
-export default Home
+
+export default Home;
